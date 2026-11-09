@@ -1,0 +1,2189 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Prepare for AME CET with openEd Labs. Explore the syllabus, practise MCQs, take mock tests and choose a structured preparation or crash course.">
+  <meta name="theme-color" content="#155eef">
+  <title>AME CET Preparation | openEd Labs</title>
+
+  <style>
+    :root {
+      --primary: #155eef;
+      --primary-dark: #1248c7;
+      --primary-light: #eaf1ff;
+      --primary-soft: #f4f7ff;
+      --navy: #101828;
+      --text: #344054;
+      --muted: #667085;
+      --border: #e4eaf2;
+      --surface: #ffffff;
+      --background: #f7f9fc;
+      --success: #039855;
+      --danger: #d92d20;
+      --radius: 16px;
+      --shadow: 0 8px 28px rgba(16, 24, 40, .06);
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system,
+        BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--background);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    button, input, select { font: inherit; }
+    button { cursor: pointer; }
+
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(255,255,255,.96);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .topbar-inner {
+      max-width: 1440px;
+      margin: auto;
+      padding: 13px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      color: var(--navy);
+      font-weight: 800;
+      font-size: 19px;
+      letter-spacing: -.5px;
+    }
+
+    .brand-mark {
+      width: 39px;
+      height: 39px;
+      border-radius: 11px;
+      display: grid;
+      place-items: center;
+      color: white;
+      background: var(--primary);
+      font-weight: 900;
+      font-size: 19px;
+      box-shadow: 0 4px 12px rgba(21,94,239,.25);
+    }
+
+    .brand small {
+      display: block;
+      font-size: 10px;
+      color: var(--muted);
+      font-weight: 600;
+      letter-spacing: 1.1px;
+      line-height: 1.2;
+    }
+
+    .top-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .btn {
+      border: 1px solid transparent;
+      border-radius: 10px;
+      padding: 10px 16px;
+      font-weight: 700;
+      transition: .2s ease;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: 7px;
+      text-decoration: none;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+      text-decoration: none;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: white;
+    }
+
+    .btn-primary:hover { background: var(--primary-dark); }
+
+    .btn-outline {
+      color: var(--primary);
+      background: white;
+      border-color: #cbd8f5;
+    }
+
+    .btn-outline:hover { background: var(--primary-soft); }
+
+    .btn-light {
+      color: var(--navy);
+      background: #fff;
+    }
+
+    .btn-small { padding: 7px 11px; font-size: 13px; }
+
+    .layout {
+      max-width: 1440px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 250px minmax(0, 1fr);
+      min-height: calc(100vh - 66px);
+    }
+
+    .sidebar {
+      background: white;
+      border-right: 1px solid var(--border);
+      padding: 24px 15px;
+    }
+
+    .sidebar-label {
+      padding: 10px 12px 7px;
+      color: #98a2b3;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+    }
+
+    .nav-link {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 11px 13px;
+      border: 0;
+      background: transparent;
+      color: #475467;
+      border-radius: 10px;
+      text-align: left;
+      font-weight: 650;
+      margin: 3px 0;
+      font-size: 14px;
+    }
+
+    .nav-link .nav-icon {
+      width: 23px;
+      text-align: center;
+      font-size: 17px;
+    }
+
+    .nav-link:hover {
+      background: var(--primary-soft);
+      color: var(--primary);
+    }
+
+    .nav-link.active {
+      background: var(--primary-light);
+      color: var(--primary);
+      font-weight: 800;
+    }
+
+    .sidebar-card {
+      margin: 28px 5px 0;
+      padding: 16px;
+      background: var(--primary-soft);
+      border: 1px solid #dce7ff;
+      border-radius: 13px;
+    }
+
+    .sidebar-card strong {
+      display: block;
+      color: var(--navy);
+      font-size: 14px;
+      margin-bottom: 5px;
+    }
+
+    .sidebar-card p {
+      color: var(--muted);
+      font-size: 12px;
+      margin: 0 0 12px;
+    }
+
+    main {
+      min-width: 0;
+      padding: 27px;
+    }
+
+    .page { display: none; }
+    .page.active { display: block; }
+
+    .page-heading {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 18px;
+      margin-bottom: 23px;
+    }
+
+    .eyebrow {
+      color: var(--primary);
+      font-weight: 800;
+      font-size: 11px;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+    }
+
+    h1, h2, h3, h4 {
+      color: var(--navy);
+      line-height: 1.25;
+      margin-top: 0;
+    }
+
+    h1 {
+      font-size: clamp(26px, 3vw, 36px);
+      letter-spacing: -1.1px;
+      margin: 7px 0;
+    }
+
+    h2 { font-size: 23px; letter-spacing: -.5px; }
+    h3 { font-size: 17px; }
+    h4 { font-size: 14px; }
+
+    .muted { color: var(--muted); }
+    .small { font-size: 12px; }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      border-radius: 20px;
+      padding: 35px;
+      color: white;
+      background: linear-gradient(115deg, #1048bd 0%, #155eef 55%, #528bff 100%);
+      box-shadow: 0 12px 35px rgba(21,94,239,.17);
+      margin-bottom: 24px;
+    }
+
+    .hero:after {
+      content: "";
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      border: 1px solid rgba(255,255,255,.17);
+      border-radius: 50%;
+      right: -65px;
+      top: -135px;
+      box-shadow: 0 0 0 35px rgba(255,255,255,.04),
+                  0 0 0 75px rgba(255,255,255,.035);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 720px;
+    }
+
+    .hero .eyebrow { color: #dbe8ff; }
+
+    .hero h1 {
+      color: white;
+      font-size: clamp(29px, 4vw, 43px);
+      max-width: 700px;
+      margin: 10px 0;
+    }
+
+    .hero p {
+      color: #e7efff;
+      max-width: 650px;
+      margin: 0 0 22px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .hero-note {
+      margin-top: 20px;
+      color: #dbe8ff;
+      font-size: 12px;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 15px;
+      margin-bottom: 24px;
+    }
+
+    .stat-card, .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .stat-card { padding: 18px; }
+
+    .stat-icon {
+      width: 37px;
+      height: 37px;
+      border-radius: 10px;
+      background: var(--primary-light);
+      color: var(--primary);
+      display: grid;
+      place-items: center;
+      font-size: 18px;
+      margin-bottom: 12px;
+    }
+
+    .stat-value {
+      color: var(--navy);
+      font-size: 25px;
+      font-weight: 850;
+      letter-spacing: -.8px;
+    }
+
+    .stat-label {
+      color: var(--muted);
+      font-size: 12px;
+      margin-top: 2px;
+    }
+
+    .section-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+      margin: 27px 0 14px;
+    }
+
+    .section-row h2 { margin: 0; }
+
+    .two-column {
+      display: grid;
+      grid-template-columns: minmax(0, 1.35fr) minmax(260px, .8fr);
+      gap: 18px;
+    }
+
+    .card { padding: 21px; }
+    .card p:last-child { margin-bottom: 0; }
+
+    .progress-track {
+      height: 9px;
+      border-radius: 99px;
+      background: #edf1f7;
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      height: 100%;
+      background: var(--primary);
+      border-radius: inherit;
+      transition: width .25s ease;
+    }
+
+    .progress-meta {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      color: var(--muted);
+      font-size: 12px;
+      margin: 9px 0;
+    }
+
+    .qualification-box {
+      background: var(--primary-soft);
+      border: 1px solid #dce7ff;
+      border-radius: 14px;
+      padding: 18px;
+    }
+
+    .field-label {
+      display: block;
+      font-size: 12px;
+      font-weight: 800;
+      color: var(--navy);
+      margin-bottom: 7px;
+    }
+
+    select, input[type="text"] {
+      width: 100%;
+      padding: 11px 12px;
+      border: 1px solid #d0d5dd;
+      border-radius: 9px;
+      background: white;
+      color: var(--text);
+      outline: none;
+    }
+
+    select:focus, input:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(21,94,239,.1);
+    }
+
+    .feature-list {
+      list-style: none;
+      padding: 0;
+      margin: 14px 0 0;
+    }
+
+    .feature-list li {
+      padding: 7px 0;
+      color: var(--text);
+      font-size: 13px;
+    }
+
+    .feature-list li:before {
+      content: "✓";
+      color: var(--success);
+      font-weight: 900;
+      margin-right: 9px;
+    }
+
+    .quick-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 15px;
+    }
+
+    .quick-card {
+      border: 1px solid var(--border);
+      background: white;
+      border-radius: 14px;
+      padding: 18px;
+      cursor: pointer;
+      transition: .2s ease;
+    }
+
+    .quick-card:hover {
+      border-color: #a9c4ff;
+      transform: translateY(-2px);
+      box-shadow: var(--shadow);
+    }
+
+    .quick-card .quick-icon {
+      font-size: 23px;
+      margin-bottom: 12px;
+    }
+
+    .quick-card strong {
+      display: block;
+      color: var(--navy);
+      margin-bottom: 5px;
+    }
+
+    .quick-card span {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .program-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 17px;
+    }
+
+    .program-card {
+      position: relative;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 22px;
+      box-shadow: var(--shadow);
+    }
+
+    .program-card.featured {
+      border: 1.5px solid #8db2ff;
+      background: linear-gradient(180deg, #f5f8ff, #fff 48%);
+    }
+
+    .program-tag {
+      display: inline-block;
+      color: var(--primary);
+      background: var(--primary-light);
+      font-size: 10px;
+      text-transform: uppercase;
+      font-weight: 850;
+      letter-spacing: .8px;
+      padding: 5px 9px;
+      border-radius: 99px;
+      margin-bottom: 12px;
+    }
+
+    .program-duration {
+      font-size: 27px;
+      font-weight: 850;
+      color: var(--primary);
+      letter-spacing: -1px;
+      margin: 5px 0;
+    }
+
+    .program-card ul {
+      padding-left: 18px;
+      color: var(--text);
+      font-size: 13px;
+    }
+
+    .program-card li { margin: 7px 0; }
+
+    .program-footer {
+      border-top: 1px solid var(--border);
+      padding-top: 15px;
+      margin-top: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin: 12px 0;
+    }
+
+    .tag {
+      display: inline-block;
+      border: 1px solid var(--border);
+      border-radius: 99px;
+      padding: 5px 9px;
+      font-size: 11px;
+      color: #475467;
+      background: white;
+    }
+
+    .notice {
+      padding: 14px 16px;
+      border-radius: 11px;
+      background: #eff6ff;
+      border: 1px solid #cfe0ff;
+      color: #194185;
+      font-size: 12px;
+      margin: 16px 0;
+    }
+
+    .warning {
+      background: #fffaeb;
+      border-color: #fedf89;
+      color: #93370d;
+    }
+
+    .syllabus-subject {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 13px;
+      margin-bottom: 12px;
+      overflow: hidden;
+    }
+
+    .subject-header {
+      padding: 15px 17px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      cursor: pointer;
+    }
+
+    .subject-header strong { color: var(--navy); }
+
+    .subject-body {
+      display: none;
+      padding: 0 17px 16px;
+      border-top: 1px solid var(--border);
+    }
+
+    .subject-body.open { display: block; }
+
+    .topic-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 8px 16px;
+      padding-top: 13px;
+    }
+
+    .topic-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      font-size: 12px;
+      color: var(--text);
+      padding: 5px 0;
+    }
+
+    .topic-item input {
+      accent-color: var(--primary);
+      margin-top: 4px;
+    }
+
+    .topic-item.done span {
+      color: #98a2b3;
+      text-decoration: line-through;
+    }
+
+    .table-wrap { overflow-x: auto; }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      font-size: 13px;
+      min-width: 430px;
+    }
+
+    th, td {
+      padding: 12px;
+      border-bottom: 1px solid var(--border);
+      text-align: left;
+    }
+
+    th {
+      background: #f8faff;
+      color: #475467;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: .6px;
+    }
+
+    td strong { color: var(--navy); }
+
+    .quiz-question {
+      font-size: 18px;
+      color: var(--navy);
+      font-weight: 750;
+      margin: 16px 0;
+    }
+
+    .quiz-option {
+      display: block;
+      width: 100%;
+      text-align: left;
+      padding: 13px 15px;
+      border: 1px solid var(--border);
+      background: white;
+      color: var(--text);
+      border-radius: 10px;
+      margin: 9px 0;
+      transition: .15s;
+    }
+
+    .quiz-option:hover {
+      border-color: var(--primary);
+      background: var(--primary-soft);
+    }
+
+    .quiz-option.correct {
+      border-color: #6ce9a6;
+      background: #ecfdf3;
+    }
+
+    .quiz-option.incorrect {
+      border-color: #fda29b;
+      background: #fef3f2;
+    }
+
+    .quiz-option:disabled { cursor: default; }
+
+    .feedback {
+      display: none;
+      border-radius: 10px;
+      padding: 13px;
+      font-size: 13px;
+      margin: 13px 0;
+    }
+
+    .feedback.show { display: block; }
+    .feedback.good { background: #ecfdf3; color: #05603a; }
+    .feedback.bad { background: #fef3f2; color: #912018; }
+
+    .mock-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .timer {
+      color: var(--primary);
+      background: var(--primary-light);
+      padding: 8px 14px;
+      border-radius: 9px;
+      font-weight: 850;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .footer {
+      padding: 25px;
+      border-top: 1px solid var(--border);
+      background: white;
+      text-align: center;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .footer strong { color: var(--navy); }
+
+    .mobile-menu { display: none; }
+
+    @media (max-width: 1050px) {
+      .stats-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .quick-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+
+    @media (max-width: 780px) {
+      .layout { display: block; }
+      .sidebar {
+        display: none;
+        position: fixed;
+        z-index: 45;
+        top: 65px;
+        bottom: 0;
+        left: 0;
+        width: 275px;
+        overflow-y: auto;
+        box-shadow: 10px 0 35px rgba(16,24,40,.12);
+      }
+      .sidebar.open { display: block; }
+      main { padding: 18px 14px 28px; }
+      .topbar-inner { padding: 10px 14px; }
+      .mobile-menu { display: inline-flex; }
+      .top-actions .btn-outline { display: none; }
+      .hero { padding: 25px 21px; }
+      .two-column { grid-template-columns: 1fr; }
+      .program-grid { grid-template-columns: 1fr; }
+      .page-heading { flex-direction: column; }
+    }
+
+    @media (max-width: 480px) {
+      .stats-grid { gap: 9px; }
+      .stat-card { padding: 13px; }
+      .stat-value { font-size: 21px; }
+      .quick-grid { grid-template-columns: 1fr 1fr; gap: 9px; }
+      .quick-card { padding: 13px; }
+      .topic-list { grid-template-columns: 1fr; }
+      .brand { font-size: 16px; }
+      .brand-mark { width: 35px; height: 35px; }
+      .hero-actions .btn { width: 100%; }
+    }
+  </style>
+</head>
+
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <div style="display:flex;align-items:center;gap:12px">
+      <button class="btn btn-outline btn-small mobile-menu" onclick="toggleMenu()" aria-label="Open navigation">☰</button>
+      <a href="#" class="brand" onclick="showPage('dashboard');return false">
+        
+        <span>
+          openEd Labs
+          <small>AME CET PREPARATION</small>
+        </span>
+      </a>
+    </div>
+
+    <div class="top-actions">
+      <a class="btn btn-outline btn-small" href="https://www.amecet.in/" target="_blank" rel="noopener">Official AME CET ↗</a>
+      <a class="btn btn-primary btn-small" href="#training" onclick="showPage('training')">Explore Training</a>
+    </div>
+  </div>
+</header>
+
+<div class="layout">
+
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-label">Workspace</div>
+
+    <button class="nav-link active" data-page="dashboard" onclick="showPage('dashboard')">
+      <span class="nav-icon">⌂</span> Dashboard
+    </button>
+
+    <button class="nav-link" data-page="syllabus" onclick="showPage('syllabus')">
+      <span class="nav-icon">▤</span> Syllabus & Topics
+    </button>
+
+    <button class="nav-link" data-page="practice" onclick="showPage('practice')">
+      <span class="nav-icon">✎</span> MCQ Practice
+    </button>
+
+    <button class="nav-link" data-page="mock" onclick="showPage('mock')">
+      <span class="nav-icon">◷</span> Mock Test
+    </button>
+
+    <button class="nav-link" data-page="pattern" onclick="showPage('pattern')">
+      <span class="nav-icon">▦</span> Exam Pattern
+    </button>
+
+    <div class="sidebar-label">Learning with openEd Labs</div>
+
+    <button class="nav-link" data-page="training" onclick="showPage('training')">
+      <span class="nav-icon">▣</span> Training Programs
+    </button>
+
+    <button class="nav-link" data-page="roadmap" onclick="showPage('roadmap')">
+      <span class="nav-icon">◈</span> Study Roadmap
+    </button>
+
+    <button class="nav-link" data-page="about" onclick="showPage('about')">
+      <span class="nav-icon">ⓘ</span> About & Contact
+    </button>
+
+    <div class="sidebar-card">
+      <strong>Need guided preparation?</strong>
+      <p>Explore structured preparation plans, crash courses and instructor-led learning.</p>
+      <button class="btn btn-primary btn-small" style="width:100%" onclick="showPage('training')">View Programs</button>
+    </div>
+  </aside>
+
+  <main>
+
+    <!-- DASHBOARD -->
+    <section class="page active" id="page-dashboard">
+
+      <div class="hero">
+        <div class="hero-content">
+          <div class="eyebrow">Your aviation entrance preparation workspace</div>
+          <h1>Prepare smarter. Build confidence. Aim higher.</h1>
+          <p>
+            A structured AME CET preparation portal by openEd Labs.
+            Explore your syllabus, practise questions, attempt mock tests
+            and follow a preparation plan that suits your timeline.
+          </p>
+          <div class="hero-actions">
+            <button class="btn btn-light" onclick="showPage('syllabus')">Explore Syllabus →</button>
+            <button class="btn btn-outline" style="background:transparent;color:white;border-color:rgba(255,255,255,.6)" onclick="showPage('training')">Explore Training</button>
+          </div>
+          <div class="hero-note">Independent preparation resource · Not affiliated with the AME CET examination authority</div>
+        </div>
+      </div>
+
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-icon">▤</div>
+          <div class="stat-value" id="statTopics">0</div>
+          <div class="stat-label">Topics completed</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">✓</div>
+          <div class="stat-value" id="statProgress">0%</div>
+          <div class="stat-label">Syllabus progress</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">✎</div>
+          <div class="stat-value" id="statAnswered">0</div>
+          <div class="stat-label">Practice questions attempted</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">★</div>
+          <div class="stat-value" id="statCorrect">0</div>
+          <div class="stat-label">Correct practice answers</div>
+        </div>
+      </div>
+
+      <div class="two-column">
+        <div class="card">
+          <div class="section-row" style="margin-top:0">
+            <h2>Your preparation progress</h2>
+            <span class="small muted" id="progressText">0% complete</span>
+          </div>
+          <div class="progress-track">
+            <div class="progress-fill" id="dashboardProgress" style="width:0%"></div>
+          </div>
+          <div class="progress-meta">
+            <span>Keep learning consistently</span>
+            <span id="completedText">0 topics done</span>
+          </div>
+          <div class="notice">
+            Your checklist progress is saved in this browser. It is not synced
+            across devices or accounts.
+          </div>
+          <button class="btn btn-primary" onclick="showPage('syllabus')">Continue Learning →</button>
+        </div>
+
+        <div class="qualification-box">
+          <h3>Choose your qualification</h3>
+          <p class="small muted">Select your academic background to view the relevant preparation subjects.</p>
+          <label class="field-label" for="qualification">I am preparing as</label>
+          <select id="qualification" onchange="updateQualification()">
+            <option value="pcm">Class 12 – PCM</option>
+            <option value="diploma">Engineering Diploma / B.Tech / PCM Higher Qualification</option>
+            <option value="nonpcm">Class 12 – Non-PCM</option>
+            <option value="class10">Class 10</option>
+          </select>
+          <div id="qualificationSummary" class="small" style="margin-top:13px;color:#344054"></div>
+        </div>
+      </div>
+
+      <div class="section-row">
+        <h2>Quick access</h2>
+      </div>
+
+      <div class="quick-grid">
+        <div class="quick-card" onclick="showPage('syllabus')">
+          <div class="quick-icon">📚</div>
+          <strong>Study the syllabus</strong>
+          <span>Explore subjects and track topic completion.</span>
+        </div>
+        <div class="quick-card" onclick="showPage('practice')">
+          <div class="quick-icon">✍️</div>
+          <strong>Practise MCQs</strong>
+          <span>Test your understanding with sample questions.</span>
+        </div>
+        <div class="quick-card" onclick="showPage('mock')">
+          <div class="quick-icon">⏱️</div>
+          <strong>Attempt a mock test</strong>
+          <span>Practise under a timed test environment.</span>
+        </div>
+        <div class="quick-card" onclick="showPage('training')">
+          <div class="quick-icon">🎓</div>
+          <strong>Join a preparation program</strong>
+          <span>Explore guided learning and crash-course options.</span>
+        </div>
+        <div class="quick-card" onclick="showPage('pattern')">
+          <div class="quick-icon">📋</div>
+          <strong>Understand exam pattern</strong>
+          <span>Review the question distribution and marks.</span>
+        </div>
+        <div class="quick-card" onclick="showPage('roadmap')">
+          <div class="quick-icon">🗓️</div>
+          <strong>Plan your preparation</strong>
+          <span>Follow a structured study roadmap.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SYLLABUS -->
+    <section class="page" id="page-syllabus">
+      <div class="page-heading">
+        <div>
+          <div class="eyebrow">Learning resources</div>
+          <h1>Syllabus & Topic Tracker</h1>
+          <p class="muted">Select your qualification and mark topics as you complete them.</p>
+        </div>
+        <button class="btn btn-outline" onclick="resetProgress()">Reset Progress</button>
+      </div>
+
+      <div class="card" style="margin-bottom:17px">
+        <label class="field-label" for="syllabusQualification">Select your qualification</label>
+        <select id="syllabusQualification" onchange="syncQualification(this.value);renderSyllabus()">
+          <option value="pcm">Class 12 – PCM</option>
+          <option value="diploma">Engineering Diploma / B.Tech / PCM Higher Qualification</option>
+          <option value="nonpcm">Class 12 – Non-PCM</option>
+          <option value="class10">Class 10</option>
+        </select>
+        <div class="progress-meta">
+          <span id="syllabusProgressLabel">0 of 0 topics completed</span>
+          <strong id="syllabusPercent">0%</strong>
+        </div>
+        <div class="progress-track">
+          <div class="progress-fill" id="syllabusProgressBar" style="width:0%"></div>
+        </div>
+      </div>
+
+      <div id="syllabusContainer"></div>
+
+      <div class="notice warning">
+        This is a topic-wise preparation checklist based on the published
+        examination reference. Topic wording and coverage may change.
+        Always cross-check the latest official AME CET brochure.
+      </div>
+    </section>
+
+    <!-- PRACTICE -->
+    <section class="page" id="page-practice">
+      <div class="page-heading">
+        <div>
+          <div class="eyebrow">Test your understanding</div>
+          <h1>MCQ Practice</h1>
+          <p class="muted">Attempt sample questions and review the explanations.</p>
+        </div>
+        <div class="tag">Practice mode</div>
+      </div>
+
+      <div class="card">
+        <div class="mock-header">
+          <div>
+            <strong id="questionCounter">Question 1</strong>
+            <div class="small muted">Sample practice questions</div>
+          </div>
+          <div class="tag" id="questionSubject">Physics</div>
+        </div>
+
+        <div class="progress-track" style="margin-top:15px">
+          <div class="progress-fill" id="questionProgress" style="width:0%"></div>
+        </div>
+
+        <div class="quiz-question" id="questionText"></div>
+        <div id="optionsContainer"></div>
+        <div class="feedback" id="answerFeedback"></div>
+
+        <div style="display:flex;justify-content:space-between;gap:10px;margin-top:20px;flex-wrap:wrap">
+          <button class="btn btn-outline" onclick="restartPractice()">Restart Practice</button>
+          <button class="btn btn-primary" id="nextQuestionBtn" onclick="nextQuestion()" disabled>Next Question →</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- MOCK TEST -->
+    <section class="page" id="page-mock">
+      <div class="page-heading">
+        <div>
+          <div class="eyebrow">Timed practice</div>
+          <h1>Mock Test</h1>
+          <p class="muted">A short sample test to practise answering under time pressure.</p>
+        </div>
+        <div class="timer" id="mockTimer">10:00</div>
+      </div>
+
+      <div class="card" id="mockStartCard">
+        <h2>Ready to begin?</h2>
+        <p class="muted">This demonstration test contains 10 sample questions and has a 10-minute timer.</p>
+        <ul class="feature-list">
+          <li>10 multiple-choice questions</li>
+          <li>One mark per correct answer in this sample test</li>
+          <li>No negative marking in this demonstration</li>
+          <li>Review your score after submission</li>
+        </ul>
+        <div class="notice warning">This is a practice activity, not an official AME CET mock paper or marking scheme.</div>
+        <button class="btn btn-primary" onclick="startMock()">Start Mock Test →</button>
+      </div>
+
+      <div class="card" id="mockTestCard" style="display:none">
+        <div class="mock-header">
+          <strong id="mockCounter">Question 1 of 10</strong>
+          <span class="tag" id="mockSubject">Physics</span>
+        </div>
+        <div class="progress-track" style="margin:14px 0">
+          <div class="progress-fill" id="mockProgress" style="width:10%"></div>
+        </div>
+        <div class="quiz-question" id="mockQuestion"></div>
+        <div id="mockOptions"></div>
+        <div style="display:flex;justify-content:space-between;gap:10px;margin-top:18px">
+          <button class="btn btn-outline" onclick="previousMockQuestion()">← Previous</button>
+          <button class="btn btn-primary" id="mockNextBtn" onclick="nextMockQuestion()">Next →</button>
+        </div>
+        <div style="margin-top:18px">
+          <button class="btn btn-primary" style="background:#101828" onclick="submitMock()">Submit Test</button>
+        </div>
+      </div>
+
+      <div class="card" id="mockResultCard" style="display:none">
+        <div class="eyebrow">Test completed</div>
+        <h2>Your practice result</h2>
+        <div class="stat-value" id="mockScore">0 / 10</div>
+        <p class="muted" id="mockResultText"></p>
+        <button class="btn btn-primary" onclick="resetMock()">Try Again</button>
+      </div>
+    </section>
+
+    <!-- EXAM PATTERN -->
+    <section class="page" id="page-pattern">
+      <div class="page-heading">
+        <div>
+          <div class="eyebrow">Know your examination</div>
+          <h1>AME CET Exam Pattern</h1>
+          <p class="muted">Review the published exam structure for different qualification categories.</p>
+        </div>
+        <a class="btn btn-outline" href="https://www.amecet.in/aircraft-maintenance-engineering-common-entrance-test-amecet-exam.php" target="_blank" rel="noopener">Official reference ↗</a>
+      </div>
+
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-icon">☷</div>
+          <div class="stat-value">90</div>
+          <div class="stat-label">Questions (published pattern)</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">◎</div>
+          <div class="stat-value">360</div>
+          <div class="stat-label">Total marks</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">◷</div>
+          <div class="stat-value">90 min</div>
+          <div class="stat-label">Duration (published pattern)</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">▣</div>
+          <div class="stat-value">MCQ</div>
+          <div class="stat-label">Question format</div>
+        </div>
+      </div>
+
+      <div class="card" style="margin-bottom:17px">
+        <h2>Class 12 – PCM</h2>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Subject</th><th>Questions</th><th>Marks</th></tr></thead>
+            <tbody>
+              <tr><td>General Awareness</td><td>15</td><td>60</td></tr>
+              <tr><td>English</td><td>15</td><td>60</td></tr>
+              <tr><td>Mathematics</td><td>20</td><td>80</td></tr>
+              <tr><td>Physics</td><td>20</td><td>80</td></tr>
+              <tr><td>Chemistry</td><td>20</td><td>80</td></tr>
+              <tr><td><strong>Total</strong></td><td><strong>90</strong></td><td><strong>360</strong></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="card" style="margin-bottom:17px">
+        <h2>Engineering Diploma / B.Tech / Higher Qualification in PCM</h2>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Subject</th><th>Questions</th><th>Marks</th></tr></thead>
+            <tbody>
+              <tr><td>General Awareness</td><td>15</td><td>60</td></tr>
+              <tr><td>English</td><td>15</td><td>60</td></tr>
+              <tr><td>Aptitude Test</td><td>60</td><td>240</td></tr>
+              <tr><td><strong>Total</strong></td><td><strong>90</strong></td><td><strong>360</strong></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="card" style="margin-bottom:17px">
+        <h2>Class 12 – Non-PCM</h2>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Subject</th><th>Questions</th><th>Marks</th></tr></thead>
+            <tbody>
+              <tr><td>General Awareness</td><td>30</td><td>120</td></tr>
+              <tr><td>English</td><td>30</td><td>120</td></tr>
+              <tr><td>General Intelligence & Reasoning</td><td>30</td><td>120</td></tr>
+              <tr><td><strong>Total</strong></td><td><strong>90</strong></td><td><strong>360</strong></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Class 10</h2>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Subject</th><th>Questions</th><th>Marks</th></tr></thead>
+            <tbody>
+              <tr><td>General Awareness</td><td>30</td><td>120</td></tr>
+              <tr><td>English</td><td>30</td><td>120</td></tr>
+              <tr><td>General Intelligence & Reasoning</td><td>30</td><td>120</td></tr>
+              <tr><td><strong>Total</strong></td><td><strong>90</strong></td><td><strong>360</strong></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="notice warning">
+        Exam details shown here are based on the AME CET reference page and may
+        be revised by the examination authority. Confirm the latest question
+        distribution, duration, marking scheme, eligibility and dates in the
+        official information brochure before relying on them.
+      </div>
+    </section>
+
+    <!-- TRAINING -->
+    <section class="page" id="page-training">
+      <div class="page-heading">
+        <div>
+          <div class="eyebrow">Learn with openEd Labs</div>
+          <h1>AME CET Preparation & Training</h1>
+          <p class="muted">Structured preparation options for students who want guided learning, regular practice and focused revision.</p>
+        </div>
+      </div>
+
+      <div class="hero" style="padding:27px;background:linear-gradient(115deg,#123d9c,#155eef)">
+        <div class="hero-content">
+          <div class="eyebrow">Preparation that fits your timeline</div>
+          <h1 style="font-size:30px">From fundamentals to exam-ready practice.</h1>
+          <p>
+            Choose a preparation format based on your current understanding,
+            available time and target examination date. Training duration and
+            class schedules can be discussed before enrolment.
+          </p>
+          <a class="btn btn-light" href="https://wa.me/919625188625?text=Hello%20openEd%20Labs%2C%20I%20am%20interested%20in%20AME%20CET%20preparation%20training." target="_blank" rel="noopener">Enquire on WhatsApp ↗</a>
+        </div>
+      </div>
+
+      <div class="section-row">
+        <h2>Preparation programs</h2>
+        <span class="tag">Suggested durations</span>
+      </div>
+
+      <div class="program-grid">
+
+        <article class="program-card">
+          <span class="program-tag">Fast revision</span>
+          <h3>Quick Revision Program</h3>
+          <div class="program-duration">2 Weeks</div>
+          <p class="muted small">For students who have already studied most of the syllabus and need a focused revision schedule.</p>
+          <ul>
+            <li>Important concept and formula revision</li>
+            <li>High-priority topic practice</li>
+            <li>Short subject-wise assessments</li>
+            <li>Exam strategy and time management</li>
+          </ul>
+          <div class="program-footer">
+            <span class="small muted">Best for final revision</span>
+            <a class="btn btn-outline btn-small" href="https://wa.me/919625188625?text=I%20want%20details%20about%20the%202-week%20AME%20CET%20revision%20program." target="_blank" rel="noopener">Enquire ↗</a>
+          </div>
+        </article>
+
+        <article class="program-card featured">
+          <span class="program-tag">Crash course</span>
+          <h3>AME CET Crash Course</h3>
+          <div class="program-duration">4 Weeks</div>
+          <p class="muted small">A focused preparation plan covering essential concepts, practice and mock assessments.</p>
+          <ul>
+            <li>Structured subject-wise coverage</li>
+            <li>Concept explanations and solved examples</li>
+            <li>Topic-wise MCQ practice</li>
+            <li>Weekly tests and performance review</li>
+            <li>Revision and exam strategy sessions</li>
+          </ul>
+          <div class="program-footer">
+            <span class="small muted">Focused exam preparation</span>
+            <a class="btn btn-primary btn-small" href="https://wa.me/919625188625?text=I%20want%20details%20about%20the%204-week%20AME%20CET%20crash%20course." target="_blank" rel="noopener">Enquire ↗</a>
+          </div>
+        </article>
+
+        <article class="program-card">
+          <span class="program-tag">Complete preparation</span>
+          <h3>Complete Preparation Program</h3>
+          <div class="program-duration">8 Weeks</div>
+          <p class="muted small">For students who want a balanced schedule of concept learning, practice and regular assessments.</p>
+          <ul>
+            <li>Detailed topic-wise preparation</li>
+            <li>Foundation concepts and problem solving</li>
+            <li>Guided MCQ practice</li>
+            <li>Regular tests and doubt-clearing</li>
+            <li>Full-length mock test practice</li>
+          </ul>
+          <div class="program-footer">
+            <span class="small muted">Balanced learning and practice</span>
+            <a class="btn btn-outline btn-small" href="https://wa.me/919625188625?text=I%20want%20details%20about%20the%208-week%20AME%20CET%20preparation%20program." target="_blank" rel="noopener">Enquire ↗</a>
+          </div>
+        </article>
+
+        <article class="program-card">
+          <span class="program-tag">Build your foundation</span>
+          <h3>Foundation Preparation Program</h3>
+          <div class="program-duration">12 Weeks</div>
+          <p class="muted small">For students who need more time to strengthen fundamentals and develop consistent study habits.</p>
+          <ul>
+            <li>Fundamental concepts and guided learning</li>
+            <li>Progressive subject-wise syllabus coverage</li>
+            <li>Practice assignments and revision</li>
+            <li>Periodic assessments</li>
+            <li>Performance feedback and study guidance</li>
+          </ul>
+          <div class="program-footer">
+            <span class="small muted">For a gradual learning journey</span>
+            <a class="btn btn-outline btn-small" href="https://wa.me/919625188625?text=I%20want%20details%20about%20the%2012-week%20AME%20CET%20foundation%20program." target="_blank" rel="noopener">Enquire ↗</a>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="section-row">
+        <h2>What can the training include?</h2>
+      </div>
+
+      <div class="quick-grid">
+        <div class="quick-card">
+          <div class="quick-icon">👨‍🏫</div>
+          <strong>Guided classes</strong>
+          <span>Instructor-led sessions according to the agreed schedule.</span>
+        </div>
+        <div class="quick-card">
+          <div class="quick-icon">📘</div>
+          <strong>Subject-wise learning</strong>
+          <span>Structured lessons and topic-based preparation.</span>
+        </div>
+        <div class="quick-card">
+          <div class="quick-icon">📝</div>
+          <strong>Practice assignments</strong>
+          <span>MCQs, worksheets and topic-level assessments.</span>
+        </div>
+        <div class="quick-card">
+          <div class="quick-icon">📊</div>
+          <strong>Progress tracking</strong>
+          <span>Review performance and identify areas for improvement.</span>
+        </div>
+        <div class="quick-card">
+          <div class="quick-icon">💬</div>
+          <strong>Doubt-clearing</strong>
+          <span>Dedicated opportunities to discuss difficult topics.</span>
+        </div>
+        <div class="quick-card">
+          <div class="quick-icon">⏱️</div>
+          <strong>Mock assessments</strong>
+          <span>Timed practice to build exam confidence.</span>
+        </div>
+      </div>
+
+      <div class="section-row">
+        <h2>How enrolment works</h2>
+      </div>
+
+      <div class="card">
+        <ol style="padding-left:21px;color:var(--text);font-size:14px">
+          <li style="margin:10px 0"><strong>Share your qualification:</strong> Tell us whether you are in Class 10, Class 12 or hold a diploma / higher qualification.</li>
+          <li style="margin:10px 0"><strong>Discuss your preparation level:</strong> Identify the subjects and topics where you need support.</li>
+          <li style="margin:10px 0"><strong>Select a suitable duration:</strong> Discuss the 2, 4, 8 or 12-week format and class schedule.</li>
+          <li style="margin:10px 0"><strong>Begin preparation:</strong> Follow the agreed learning plan, practice schedule and assessments.</li>
+        </ol>
+        <div class="notice">
+          Program durations are proposed openEd Labs training formats, not
+          official AME CET courses. Class frequency, delivery mode, fees,
+          batch availability and start dates are confirmed individually before enrolment.
+        </div>
+        <a class="btn btn-primary" href="mailto:openedlabs@gmail.com?subject=AME%20CET%20Training%20Enquiry">Request Training Details ↗</a>
+      </div>
+    </section>
+
+    <!-- ROADMAP -->
+    <section class="page" id="page-roadmap">
+      <div class="page-heading">
+        <div>
+          <div class="eyebrow">Plan your learning</div>
+          <h1>Preparation Roadmap</h1>
+          <p class="muted">A suggested weekly structure. Adapt it to your qualification and available study time.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Suggested 8-week roadmap</h2>
+        <div class="notice">Use this as a planning template. The actual order and time allocation should depend on your syllabus, current level and examination notification.</div>
+        <div id="roadmapList"></div>
+      </div>
+
+      <div class="section-row">
+        <h2>Suggested daily study routine</h2>
+      </div>
+
+      <div class="card">
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Study block</th><th>Suggested time</th><th>Activity</th></tr></thead>
+            <tbody>
+              <tr><td>Session 1</td><td>60 minutes</td><td>Concept learning</td></tr>
+              <tr><td>Session 2</td><td>45 minutes</td><td>Problem solving / practice</td></tr>
+              <tr><td>Session 3</td><td>30 minutes</td><td>Revision and formula review</td></tr>
+              <tr><td>Session 4</td><td>30 minutes</td><td>MCQs and error analysis</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="small muted">This is an illustrative routine, not a mandatory timetable.</p>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="page" id="page-about">
+      <div class="page-heading">
+        <div>
+          <div class="eyebrow">About this portal</div>
+          <h1>AME CET Preparation by openEd Labs</h1>
+          <p class="muted">Independent learning resources and preparation support for students interested in aviation education.</p>
+        </div>
+      </div>
+
+      <div class="two-column">
+        <div class="card">
+          <h2>About openEd Labs</h2>
+          <p>
+            openEd Labs provides learning and training resources designed
+            to help students build practical understanding, strengthen
+            concepts and prepare through structured learning.
+          </p>
+          <p>
+            This AME CET preparation portal brings together syllabus
+            checklists, sample practice questions, mock assessments and
+            information about optional guided preparation programs.
+          </p>
+          <a class="btn btn-outline" href="https://openedlabs.eduspace.work/" target="_blank" rel="noopener">Visit openEd Labs ↗</a>
+        </div>
+
+        <div class="card">
+          <h2>Contact for training</h2>
+          <p class="muted small">For preparation plans, class schedules and enrolment enquiries:</p>
+          <p><strong>Email</strong><br><a href="mailto:openedlabs@gmail.com">openedlabs@gmail.com</a></p>
+          <p><strong>WhatsApp / Call</strong><br><a href="https://wa.me/919625188625" target="_blank" rel="noopener">+91 96251 88625</a></p>
+          <a class="btn btn-primary" href="https://wa.me/919625188625?text=Hello%20openEd%20Labs%2C%20I%20would%20like%20to%20know%20about%20AME%20CET%20preparation." target="_blank" rel="noopener">Contact openEd Labs ↗</a>
+        </div>
+      </div>
+
+      <div class="section-row">
+        <h2>Important official resources</h2>
+      </div>
+
+      <div class="card">
+        <ul class="feature-list">
+          <li><a href="https://www.amecet.in/" target="_blank" rel="noopener">AME CET official website</a></li>
+          <li><a href="https://www.amecet.in/aircraft-maintenance-engineering-common-entrance-test-amecet-exam.php" target="_blank" rel="noopener">AME CET exam details, pattern and syllabus reference</a></li>
+        </ul>
+      </div>
+
+      <div class="notice warning">
+        <strong>Disclaimer:</strong> This portal is an independent educational
+        preparation resource developed by openEd Labs. It is not the official
+        AME CET website and is not affiliated with, endorsed by or operated
+        by the AME CET examination authority. Exam dates, eligibility,
+        syllabus, question distribution, fees and admission requirements
+        are subject to official notifications. Students must verify current
+        information directly with the examination authority.
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<footer class="footer">
+  <strong>openEd Labs</strong> · Learn • Build • Deploy • Innovate
+  <br>
+  Independent AME CET preparation resources
+  <br>
+  <span>© <span id="year"></span> openEd Labs. All rights reserved.</span>
+</footer>
+
+<script>
+  // ---------------------------------------------
+  // NAVIGATION
+  // ---------------------------------------------
+
+  function showPage(name) {
+    document.querySelectorAll(".page").forEach(page => page.classList.remove("active"));
+    document.querySelectorAll(".nav-link").forEach(link => link.classList.remove("active"));
+
+    const page = document.getElementById("page-" + name);
+    if (page) page.classList.add("active");
+
+    const nav = document.querySelector('[data-page="' + name + '"]');
+    if (nav) nav.classList.add("active");
+
+    document.getElementById("sidebar").classList.remove("open");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+
+    if (name === "syllabus") renderSyllabus();
+    if (name === "dashboard") updateDashboard();
+    if (name === "practice") renderPractice();
+    if (name === "roadmap") renderRoadmap();
+  }
+
+  function toggleMenu() {
+    document.getElementById("sidebar").classList.toggle("open");
+  }
+
+  // ---------------------------------------------
+  // QUALIFICATION AND SYLLABUS
+  // ---------------------------------------------
+
+  const syllabusData = {
+    pcm: {
+      label: "Class 12 – PCM",
+      summary: "Preparation subjects: General Awareness, English, Mathematics, Physics and Chemistry.",
+      subjects: {
+        "General Awareness": [
+          "Static General Knowledge",
+          "General Science",
+          "Current Affairs",
+          "Books and Authors",
+          "Important People and Portfolios"
+        ],
+        "English": [
+          "Reading Comprehension",
+          "Fill in the Blanks",
+          "Spellings",
+          "Phrases and Idioms",
+          "Synonyms and Antonyms",
+          "One-word Substitution",
+          "Sentence Correction"
+        ],
+        "Mathematics": [
+          "Sets, Relations and Functions",
+          "Complex Numbers and Quadratic Equations",
+          "Matrices and Determinants",
+          "Permutations and Combinations",
+          "Mathematical Induction",
+          "Binomial Theorem",
+          "Sequences and Series",
+          "Limits, Continuity and Differentiability",
+          "Integral Calculus",
+          "Differential Equations",
+          "Coordinate Geometry",
+          "Three-dimensional Geometry",
+          "Vector Algebra",
+          "Statistics and Probability",
+          "Trigonometry",
+          "Mathematical Reasoning"
+        ],
+        "Physics": [
+          "Physics and Measurement",
+          "Kinematics",
+          "Laws of Motion",
+          "Work, Energy and Power",
+          "Rotational Motion",
+          "Gravitation",
+          "Properties of Solids and Liquids",
+          "Thermodynamics",
+          "Kinetic Theory of Gases",
+          "Oscillations and Waves",
+          "Electrostatics",
+          "Current Electricity",
+          "Magnetic Effects of Current and Magnetism",
+          "Electromagnetic Induction and Alternating Currents",
+          "Electromagnetic Waves",
+          "Optics",
+          "Dual Nature of Matter and Radiation",
+          "Atoms and Nuclei",
+          "Electronic Devices",
+          "Communication Systems"
+        ],
+        "Chemistry": [
+          "Basic Concepts in Chemistry",
+          "Chemical Thermodynamics",
+          "Solutions",
+          "Equilibrium",
+          "Redox Reactions and Electrochemistry",
+          "Chemical Kinetics",
+          "Surface Chemistry",
+          "Classification of Elements and Periodicity",
+          "General Principles of Isolation of Metals",
+          "Hydrogen and s-Block Elements",
+          "p-Block Elements",
+          "d- and f-Block Elements",
+          "Coordination Compounds",
+          "Organic Chemistry Fundamentals",
+          "Hydrocarbons",
+          "Isomerism and IUPAC Nomenclature",
+          "Organic Compounds Containing Halogens",
+          "Organic Compounds Containing Oxygen",
+          "Organic Compounds Containing Nitrogen",
+          "Polymers"
+        ]
+      }
+    },
+
+    diploma: {
+      label: "Engineering Diploma / B.Tech / Higher Qualification in PCM",
+      summary: "Preparation subjects: General Awareness, English and Aptitude Test.",
+      subjects: {
+        "General Awareness": [
+          "General Science",
+          "Current Affairs",
+          "Books and Authors",
+          "Sports",
+          "Important Schemes",
+          "People in the News",
+          "General Knowledge"
+        ],
+        "English": [
+          "Phrases and Idioms",
+          "One-word Substitution",
+          "Sentence Correction",
+          "Error Spotting",
+          "Fill in the Blanks",
+          "Spellings Correction",
+          "Reading Comprehension",
+          "Synonyms and Antonyms",
+          "Active and Passive Voice",
+          "Sentence Rearrangement",
+          "Sentence Improvement",
+          "Cloze Test"
+        ],
+        "Aptitude Test": [
+          "Engineering Mechanics",
+          "Engineering Graphics",
+          "Basic Electrical Engineering",
+          "Basic Electronics Engineering",
+          "Elements of Computer Science",
+          "Basic Workshop Practice",
+          "Physics – Diploma Level",
+          "Chemistry – Diploma Level",
+          "Mathematics – Diploma Level",
+          "Logical and Analytical Problem Solving"
+        ]
+      }
+    },
+
+    nonpcm: {
+      label: "Class 12 – Non-PCM",
+      summary: "Preparation subjects: General Awareness, English and General Intelligence & Reasoning.",
+      subjects: {
+        "General Awareness": [
+          "Static General Knowledge",
+          "General Science",
+          "Current Affairs",
+          "Books and Authors",
+          "Important People and Portfolios"
+        ],
+        "English": [
+          "Reading Comprehension",
+          "Fill in the Blanks",
+          "Spellings",
+          "Phrases and Idioms",
+          "Synonyms and Antonyms",
+          "One-word Substitution",
+          "Sentence Correction"
+        ],
+        "General Intelligence & Reasoning": [
+          "Coding and Decoding",
+          "Analogy",
+          "Odd One Out",
+          "Direction Sense",
+          "Ranking",
+          "Paper Folding and Cutting",
+          "Mirror Images",
+          "Embedded Figures",
+          "Figure Completion",
+          "Counting Figures",
+          "Dictionary Order",
+          "Blood Relations",
+          "Matrix-based Questions"
+        ]
+      }
+    },
+
+    class10: {
+      label: "Class 10",
+      summary: "Preparation subjects: General Awareness, English and General Intelligence & Reasoning.",
+      subjects: {
+        "General Awareness": [
+          "Static General Knowledge",
+          "General Science",
+          "Current Affairs",
+          "Books and Authors",
+          "Important People and Portfolios"
+        ],
+        "English": [
+          "Reading Comprehension",
+          "Fill in the Blanks",
+          "Spellings",
+          "Phrases and Idioms",
+          "Synonyms and Antonyms",
+          "One-word Substitution",
+          "Sentence Correction"
+        ],
+        "General Intelligence & Reasoning": [
+          "Coding and Decoding",
+          "Analogy",
+          "Odd One Out",
+          "Direction Sense",
+          "Ranking",
+          "Paper Folding and Cutting",
+          "Mirror Images",
+          "Embedded Figures",
+          "Figure Completion",
+          "Counting Figures",
+          "Dictionary Order",
+          "Blood Relations",
+          "Matrix-based Questions"
+        ]
+      }
+    }
+  };
+
+  let currentQualification = localStorage.getItem("ame_qualification") || "pcm";
+
+  function updateQualification() {
+    const select = document.getElementById("qualification");
+    currentQualification = select.value;
+    localStorage.setItem("ame_qualification", currentQualification);
+    document.getElementById("syllabusQualification").value = currentQualification;
+    renderQualificationSummary();
+    renderSyllabus();
+    updateDashboard();
+  }
+
+  function syncQualification(value) {
+    currentQualification = value;
+    localStorage.setItem("ame_qualification", value);
+    document.getElementById("qualification").value = value;
+    renderQualificationSummary();
+    updateDashboard();
+  }
+
+  function renderQualificationSummary() {
+    const item = syllabusData[currentQualification];
+    document.getElementById("qualificationSummary").textContent = item.summary;
+    document.getElementById("qualification").value = currentQualification;
+    document.getElementById("syllabusQualification").value = currentQualification;
+  }
+
+  function getProgressKey() {
+    return "ame_progress_" + currentQualification;
+  }
+
+  function getProgress() {
+    try {
+      return JSON.parse(localStorage.getItem(getProgressKey()) || "{}");
+    } catch {
+      return {};
+    }
+  }
+
+  function saveProgress(progress) {
+    localStorage.setItem(getProgressKey(), JSON.stringify(progress));
+  }
+
+  function renderSyllabus() {
+    const data = syllabusData[currentQualification];
+    const progress = getProgress();
+    const container = document.getElementById("syllabusContainer");
+    container.innerHTML = "";
+
+    let total = 0;
+    let done = 0;
+
+    Object.entries(data.subjects).forEach(([subject, topics], index) => {
+      const subjectId = "subject-" + index;
+      let subjectDone = 0;
+
+      topics.forEach((topic, topicIndex) => {
+        total++;
+        const key = subject + "::" + topic;
+        if (progress[key]) {
+          done++;
+          subjectDone++;
+        }
+      });
+
+      const wrapper = document.createElement("div");
+      wrapper.className = "syllabus-subject";
+
+      const header = document.createElement("div");
+      header.className = "subject-header";
+      header.innerHTML = `
+        <div>
+          <strong>${escapeHTML(subject)}</strong>
+          <div class="small muted">${subjectDone} of ${topics.length} topics completed</div>
+        </div>
+        <span style="color:var(--primary);font-weight:800">＋</span>
+      `;
+
+      const body = document.createElement("div");
+      body.className = "subject-body";
+      body.id = subjectId;
+
+      const list = document.createElement("div");
+      list.className = "topic-list";
+
+      topics.forEach(topic => {
+        const key = subject + "::" + topic;
+        const label = document.createElement("label");
+        label.className = "topic-item" + (progress[key] ? " done" : "");
+
+        const checkbox = document.createElement("input");
+        checkbox.type = "checkbox";
+        checkbox.checked = !!progress[key];
+        checkbox.addEventListener("change", () => {
+          const updated = getProgress();
+          updated[key] = checkbox.checked;
+          saveProgress(updated);
+          renderSyllabus();
+          updateDashboard();
+        });
+
+        const span = document.createElement("span");
+        span.textContent = topic;
+
+        label.append(checkbox, span);
+        list.appendChild(label);
+      });
+
+      body.appendChild(list);
+      header.addEventListener("click", () => body.classList.toggle("open"));
+
+      wrapper.append(header, body);
+      container.appendChild(wrapper);
+    });
+
+    const percentage = total ? Math.round(done / total * 100) : 0;
+    document.getElementById("syllabusProgressLabel").textContent =
+      done + " of " + total + " topics completed";
+    document.getElementById("syllabusPercent").textContent = percentage + "%";
+    document.getElementById("syllabusProgressBar").style.width = percentage + "%";
+  }
+
+  function resetProgress() {
+    if (!confirm("Reset all topic completion for this qualification?")) return;
+    localStorage.removeItem(getProgressKey());
+    renderSyllabus();
+    updateDashboard();
+  }
+
+  function updateDashboard() {
+    const progress = getProgress();
+    const subjects = syllabusData[currentQualification].subjects;
+    let total = 0, done = 0;
+
+    Object.entries(subjects).forEach(([subject, topics]) => {
+      topics.forEach(topic => {
+        total++;
+        if (progress[subject + "::" + topic]) done++;
+      });
+    });
+
+    const percentage = total ? Math.round(done / total * 100) : 0;
+    const stats = JSON.parse(localStorage.getItem("ame_practice_stats") || '{"attempted":0,"correct":0}');
+
+    document.getElementById("statTopics").textContent = done;
+    document.getElementById("statProgress").textContent = percentage + "%";
+    document.getElementById("statAnswered").textContent = stats.attempted;
+    document.getElementById("statCorrect").textContent = stats.correct;
+    document.getElementById("dashboardProgress").style.width = percentage + "%";
+    document.getElementById("progressText").textContent = percentage + "% complete";
+    document.getElementById("completedText").textContent = done + " topics done";
+    document.getElementById("qualification").value = currentQualification;
+    document.getElementById("syllabusQualification").value = currentQualification;
+    renderQualificationSummary();
+  }
+
+  // ---------------------------------------------
+  // PRACTICE QUESTIONS
+  // ---------------------------------------------
+
+  const practiceQuestions = [
+    {
+      subject: "Physics",
+      question: "What is the SI unit of force?",
+      options: ["Joule", "Newton", "Watt", "Pascal"],
+      answer: 1,
+      explanation: "The SI unit of force is the Newton (N), named after Isaac Newton."
+    },
+    {
+      subject: "Physics",
+      question: "Which law explains the relationship between force, mass and acceleration?",
+      options: ["Newton's First Law", "Newton's Second Law", "Newton's Third Law", "Law of Gravitation"],
+      answer: 1,
+      explanation: "Newton's Second Law states that force is equal to mass multiplied by acceleration."
+    },
+    {
+      subject: "Mathematics",
+      question: "What is the derivative of x² with respect to x?",
+      options: ["x", "2x", "x³", "2"],
+      answer: 1,
+      explanation: "Using the power rule, d(x²)/dx = 2x."
+    },
+    {
+      subject: "Chemistry",
+      question: "What is the chemical symbol for Sodium?",
+      options: ["So", "S", "Na", "N"],
+      answer: 2,
+      explanation: "The chemical symbol for Sodium is Na."
+    },
+    {
+      subject: "English",
+      question: "Choose the synonym of 'Abundant'.",
+      options: ["Scarce", "Plentiful", "Limited", "Rare"],
+      answer: 1,
+      explanation: "Abundant means available in large quantities; plentiful is a synonym."
+    },
+    {
+      subject: "General Awareness",
+      question: "Which organisation is responsible for civil aviation regulation in India?",
+      options: ["ISRO", "DGCA", "DRDO", "BIS"],
+      answer: 1,
+      explanation: "The Directorate General of Civil Aviation (DGCA) is India's civil aviation regulator."
+    },
+    {
+      subject: "Reasoning",
+      question: "Find the next number: 2, 4, 8, 16, __",
+      options: ["18", "24", "30", "32"],
+      answer: 3,
+      explanation: "Each number is multiplied by 2. The next number is 32."
+    },
+    {
+      subject: "Mathematics",
+      question: "What is the value of sin 30°?",
+      options: ["0", "1", "1/2", "√3/2"],
+      answer: 2,
+      explanation: "The standard trigonometric value of sin 30° is 1/2."
+    },
+    {
+      subject: "Chemistry",
+      question: "A solution with pH less than 7 is generally:",
+      options: ["Acidic", "Basic", "Neutral", "Always saturated"],
+      answer: 0,
+      explanation: "At standard conditions, a pH below 7 indicates an acidic solution."
+    },
+    {
+      subject: "Physics",
+      question: "Which instrument is commonly used to measure electric current?",
+      options: ["Voltmeter", "Ammeter", "Barometer", "Thermometer"],
+      answer: 1,
+      explanation: "An ammeter measures electric current in a circuit."
+    }
+  ];
+
+  let practiceIndex = 0;
+  let practiceAnswered = false;
+
+  function renderPractice() {
+    const q = practiceQuestions[practiceIndex];
+    document.getElementById("questionCounter").textContent =
+      "Question " + (practiceIndex + 1) + " of " + practiceQuestions.length;
+    document.getElementById("questionSubject").textContent = q.subject;
+    document.getElementById("questionText").textContent = q.question;
+    document.getElementById("questionProgress").style.width =
+      ((practiceIndex + 1) / practiceQuestions.length * 100) + "%";
+
+    const options = document.getElementById("optionsContainer");
+    options.innerHTML = "";
+
+    q.options.forEach((option, index) => {
+      const button = document.createElement("button");
+      button.className = "quiz-option";
+      button.textContent = String.fromCharCode(65 + index) + ". " + option;
+      button.addEventListener("click", () => answerPractice(index));
+      options.appendChild(button);
+    });
+
+    practiceAnswered = false;
+    document.getElementById("nextQuestionBtn").disabled = true;
+    document.getElementById("nextQuestionBtn").textContent =
+      practiceIndex === practiceQuestions.length - 1 ? "Finish Practice" : "Next Question →";
+
+    const feedback = document.getElementById("answerFeedback");
+    feedback.className = "feedback";
+    feedback.textContent = "";
+  }
+
+  function answerPractice(selected) {
+    if (practiceAnswered) return;
+    practiceAnswered = true;
+
+    const q = practiceQuestions[practiceIndex];
+    const buttons = document.querySelectorAll("#optionsContainer button");
+    buttons.forEach((button, index) => {
+      button.disabled = true;
+      if (index === q.answer) button.classList.add("correct");
+      if (index === selected && selected !== q.answer) button.classList.add("incorrect");
+    });
+
+    const isCorrect = selected === q.answer;
+    const stats = JSON.parse(localStorage.getItem("ame_practice_stats") || '{"attempted":0,"correct":0}');
+    stats.attempted++;
+    if (isCorrect) stats.correct++;
+    localStorage.setItem("ame_practice_stats", JSON.stringify(stats));
+
+    const feedback = document.getElementById("answerFeedback");
+    feedback.className = "feedback show " + (isCorrect ? "good" : "bad");
+    feedback.innerHTML = "<strong>" + (isCorrect ? "Correct!" : "Not quite.") +
+      "</strong> " + escapeHTML(q.explanation);
+
+    document.getElementById("nextQuestionBtn").disabled = false;
+    updateDashboard();
+  }
+
+  function nextQuestion() {
+    if (!practiceAnswered) return;
+    if (practiceIndex < practiceQuestions.length - 1) {
+      practiceIndex++;
+      renderPractice();
+    } else {
+      practiceIndex = 0;
+      renderPractice();
+      alert("You have completed this practice set.");
+    }
+  }
+
+  function restartPractice() {
+    practiceIndex = 0;
+    renderPractice();
+  }
+
+  // ---------------------------------------------
+  // MOCK TEST
+  // ---------------------------------------------
+
+  const mockQuestions = practiceQuestions.slice(0, 10);
+  let mockIndex = 0;
+  let mockAnswers = {};
+  let mockInterval = null;
+  let mockSeconds = 600;
+  let mockStarted = false;
+
+  function startMock() {
+    mockIndex = 0;
+    mockAnswers = {};
+    mockSeconds = 600;
+    mockStarted = true;
+
+    document.getElementById("mockStartCard").style.display = "none";
+    document.getElementById("mockResultCard").style.display = "none";
+    document.getElementById("mockTestCard").style.display = "block";
+
+    renderMockQuestion();
+    updateTimer();
+
+    clearInterval(mockInterval);
+    mockInterval = setInterval(() => {
+      mockSeconds--;
+      updateTimer();
+      if (mockSeconds <= 0) submitMock();
+    }, 1000);
+  }
+
+  function updateTimer() {
+    const min = Math.floor(mockSeconds / 60);
+    const sec = mockSeconds % 60;
+    document.getElementById("mockTimer").textContent =
+      String(min).padStart(2, "0") + ":" + String(sec).padStart(2, "0");
+  }
+
+  function renderMockQuestion() {
+    const q = mockQuestions[mockIndex];
+    document.getElementById("mockCounter").textContent =
+      "Question " + (mockIndex + 1) + " of " + mockQuestions.length;
+    document.getElementById("mockSubject").textContent = q.subject;
+    document.getElementById("mockQuestion").textContent = q.question;
+    document.getElementById("mockProgress").style.width =
+      ((mockIndex + 1) / mockQuestions.length * 100) + "%";
+
+    const container = document.getElementById("mockOptions");
+    container.innerHTML = "";
+
+    q.options.forEach((option, index) => {
+      const button = document.createElement("button");
+      button.className = "quiz-option";
+      button.textContent = String.fromCharCode(65 + index) + ". " + option;
+
+      if (mockAnswers[mockIndex] === index) button.classList.add("correct");
+
+      button.addEventListener("click", () => {
+        mockAnswers[mockIndex] = index;
+        renderMockQuestion();
+      });
+
+      container.appendChild(button);
+    });
+
+    document.getElementById("mockNextBtn").textContent =
+      mockIndex === mockQuestions.length - 1 ? "Review Answers" : "Next →";
+  }
+
+  function previousMockQuestion() {
+    if (mockIndex > 0) {
+      mockIndex--;
+      renderMockQuestion();
+    }
+  }
+
+  function nextMockQuestion() {
+    if (mockIndex < mockQuestions.length - 1) {
+      mockIndex++;
+      renderMockQuestion();
+    } else {
+      const unanswered = mockQuestions.filter((q, i) => mockAnswers[i] === undefined).length;
+      alert(unanswered + " question(s) are unanswered. You can submit or review them.");
+    }
+  }
+
+  function submitMock() {
+    if (!mockStarted) return;
+    if (mockSeconds > 0 && !confirm("Submit your mock test now?")) return;
+
+    clearInterval(mockInterval);
+    mockStarted = false;
+
+    let score = 0;
+    mockQuestions.forEach((q, index) => {
+      if (mockAnswers[index] === q.answer) score++;
+    });
+
+    document.getElementById("mockTestCard").style.display = "none";
+    document.getElementById("mockResultCard").style.display = "block";
+    document.getElementById("mockScore").textContent = score + " / " + mockQuestions.length;
+    document.getElementById("mockResultText").textContent =
+      "You answered " + Object.keys(mockAnswers).length + " of " +
+      mockQuestions.length + " questions. This score is for the sample practice test only.";
+  }
+
+  function resetMock() {
+    clearInterval(mockInterval);
+    mockStarted = false;
+    document.getElementById("mockResultCard").style.display = "none";
+    document.getElementById("mockTestCard").style.display = "none";
+    document.getElementById("mockStartCard").style.display = "block";
+    document.getElementById("mockTimer").textContent = "10:00";
+  }
+
+  // ---------------------------------------------
+  // STUDY ROADMAP
+  // ---------------------------------------------
+
+  const roadmap = [
+    ["Week 1", "Understand your syllabus, assess your current level and revise fundamental concepts."],
+    ["Week 2", "Start structured subject-wise preparation and build topic-level understanding."],
+    ["Week 3", "Continue syllabus coverage and solve basic and intermediate practice questions."],
+    ["Week 4", "Complete priority topics and attempt subject-wise assessments."],
+    ["Week 5", "Focus on weaker areas, problem solving and mixed-topic practice."],
+    ["Week 6", "Revise important concepts and practise timed question sets."],
+    ["Week 7", "Attempt mock tests, review mistakes and improve time management."],
+    ["Week 8", "Final revision, formula review, confidence building and examination strategy."]
+  ];
+
+  function renderRoadmap() {
+    const container = document.getElementById("roadmapList");
+    if (container.children.length) return;
+
+    roadmap.forEach((item, index) => {
+      const row = document.createElement("div");
+      row.style.cssText =
+        "display:flex;gap:15px;padding:15px 0;border-bottom:1px solid var(--border)";
+
+      row.innerHTML = `
+        <div style="min-width:40px;height:40px;border-radius:11px;background:var(--primary-light);color:var(--primary);display:grid;place-items:center;font-weight:850">
+          ${index + 1}
+        </div>
+        <div>
+          <strong style="color:var(--navy)">${item[0]}</strong>
+          <div class="small muted">${item[1]}</div>
+        </div>
+      `;
+      container.appendChild(row);
+    });
+  }
+
+  // ---------------------------------------------
+  // HELPERS AND INITIALISATION
+  // ---------------------------------------------
+
+  function escapeHTML(value) {
+    return String(value).replace(/[&<>"']/g, char => ({
+      "&": "&amp;",
+      "<": "&lt;",
+      ">": "&gt;",
+      '"': "&quot;",
+      "'": "&#039;"
+    })[char]);
+  }
+
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  document.getElementById("qualification").value = currentQualification;
+  document.getElementById("syllabusQualification").value = currentQualification;
+
+  renderQualificationSummary();
+  renderSyllabus();
+  renderPractice();
+  renderRoadmap();
+  updateDashboard();
+</script>
+
+</body>
+</html>
+
